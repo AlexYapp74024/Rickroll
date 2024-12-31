@@ -10,7 +10,7 @@ FROM oven/bun:1-slim AS runner
 WORKDIR /app
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/package*.json ./
-RUN bun install
+COPY --from=builder /app/node_modules ./node_modules
 
 # Define build arguments with default values
 ARG PORT=3000
