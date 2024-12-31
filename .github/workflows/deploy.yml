@@ -25,9 +25,13 @@ jobs:
         uses: a7ul/tar-action@v1.1.0
         with:
           command: c
-          cwd: "./build"
+          cwd: "./"
           files: |
-            .
+            build/
+            package.json
+            bun.lockb
+            captain-definition
+            Dockerfile
           outPath: deploy.tar
 
       - name: Deploy App to CapRover
