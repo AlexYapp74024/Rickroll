@@ -9,7 +9,7 @@
   <div class="flex flex-col items-center justify-center space-y-4">
     <h1 class="text-white text-4xl font-bold">
       You've Been Rick Rolled ! !
-      <h1>
+    </h1>
         <img
           src="/rickroll.gif"
           alt="Never Gonna Give You Up!"
