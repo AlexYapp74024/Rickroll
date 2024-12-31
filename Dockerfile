@@ -12,8 +12,14 @@ COPY --from=builder /app/build ./build
 COPY --from=builder /app/package*.json ./
 RUN bun install
 
-# EXPOSE 3000
-# ENV PORT=3000
-# ENV HOST=0.0.0.0
+# Define build arguments with default values
+ARG PORT=3000
+ARG HOST=0.0.0.0
+
+# Set environment variables from build arguments
+ENV PORT=${PORT}
+ENV HOST=${HOST}
+
+EXPOSE ${PORT}
 
 CMD ["bun", "./build/index.js"]
