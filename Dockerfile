@@ -20,7 +20,7 @@ COPY --from=builder /app/bun.lockb ./bun.lockb
 
 RUN bun install
 
-ARG PORT=3000
+ARG PORT=80
 ARG HOST=0.0.0.0
 
 ENV PORT=${PORT}
