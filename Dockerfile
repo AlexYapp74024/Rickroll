@@ -18,7 +18,7 @@ COPY --from=builder /app/build ./build
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/bun.lockb ./bun.lockb
 
-RUN bun install --production
+RUN bun install
 
 ARG PORT=3000
 ARG HOST=0.0.0.0
