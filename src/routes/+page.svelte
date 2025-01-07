@@ -2,12 +2,12 @@
 </script>
 
 <svelte:head>
-  <title>You've Been Rick Rolled!</title>
+  <title>Welcome</title>
 </svelte:head>
 
 <div class="flex min-h-screen items-center justify-center">
   <div class="flex flex-col items-center justify-center space-y-4">
-    <h1 class="text-white text-4xl font-bold">You've Been Rick Rolled !</h1>
+    <p class="text-white text-4xl font-bold">You've Been Rick Rolled !</p>
     <img
       src="/rickroll.gif"
       alt="Never Gonna Give You Up!"
