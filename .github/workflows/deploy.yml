@@ -9,6 +9,9 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      DOCKER_BUILDKIT: 1
+      BUILDKIT_PROGRESS: plain
 
     steps:
       - name: Check out repository
@@ -34,6 +37,9 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ env.IMAGE_URL }}
+          build-args: |
+            BUILDKIT_STEP_LOG_MAX_SIZE=10485760
+            BUILDKIT_STEP_LOG_MAX_SPEED=10485760
 
       - name: Deploy Image to CapRover
         uses: caprover/deploy-from-github@v1.1.2
