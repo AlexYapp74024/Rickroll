@@ -18,4 +18,4 @@ RUN bun run build
 
 EXPOSE ${PORT}
 
-CMD bun run ./build/index.js
+CMD ["bun", "run", "./build/index.js"]
